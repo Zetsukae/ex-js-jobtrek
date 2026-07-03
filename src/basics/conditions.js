@@ -13,7 +13,13 @@
  * @return {boolean} true if n is bigger than 2
  */
 export function isBiggerThan2(n) {
-  // Write your code here
+    if (typeof n === 'string' || Number.isNaN(n)) {
+        throw new Error('n must be a number')
+    }
+    if (n > 2) {
+        return true
+    }
+    return false
 }
 
 /**
@@ -22,5 +28,17 @@ export function isBiggerThan2(n) {
  * @return {boolean} true if n is a multiple of m
  */
 export function isMult(n, m) {
-  // Write your code here
+    if (
+        typeof n === 'string' ||
+        Number.isNaN(n) ||
+        typeof m !== 'number' ||
+        Number.isNaN(m)
+    ) {
+        throw new Error('n and m must be numbers')
+    }
+
+    if (n % m === 0) {
+        return true
+    }
+    return false
 }

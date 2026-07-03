@@ -3,7 +3,7 @@
  * @return {array<string>} An array with all words isolated, and with empty strings removed
  */
 export function splitAllStringsByWordAndFilterEmptyOnes(array) {
-  // Write your code here
+    // Write your code here
 }
 
 /**
@@ -13,7 +13,7 @@ export function splitAllStringsByWordAndFilterEmptyOnes(array) {
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
  */
 export function concatenateArrays(array1, array2) {
-  // Write your code here
+    // Write your code here
 }
 
 /**
@@ -23,9 +23,9 @@ export function concatenateArrays(array1, array2) {
  * @return {array<*>} A new array with the replacements applied. The original array must not be modified.
  */
 export function replaceElementsInArrayAtAGivenPlace(
-  array,
-  index,
-  ...newElements
+    array,
+    index,
+    ...newElements
 ) {
-  // Write your code here
+    // Write your code here
 }
