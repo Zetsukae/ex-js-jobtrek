@@ -39,5 +39,16 @@ export function replaceElementsInArrayAtAGivenPlace(
     index,
     ...newElements
 ) {
-    // Write your code here commit after finishing the func.
+    if (!Array.isArray(array)) {
+        throw new Error('array must be an array')
+    }
+    if (typeof index !== 'number' || Number.isNaN(index)) {
+        throw new Error('index must be a number')
+    }
+    if (index < 0 || index >= array.length) {
+        throw new Error('index must be within the bounds of the array')
+    }
+    const newArray = [...array]
+    newArray.splice(index, newElements.length, ...newElements)
+    return newArray
 }
