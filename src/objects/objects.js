@@ -11,8 +11,8 @@
  */
 export function createUserObject() {
     return {
-        first_name: "Toto",
-        last_name: "Tutu"
+        first_name: 'Toto',
+        last_name: 'Tutu',
     }
 }
 
@@ -31,9 +31,11 @@ export function accessPropertiesInObjects(object) {
  * "values" should contain all original object values mapped to lowercase
  */
 export function iteratesThroughObjectValuesAndProperties(object) {
-    const uppercasedKeys = Object.keys(object).map(key => key.toUpperCase());
-    const lowercasedValues = Object.values(object).map(value => value.toLowerCase());
-    return { keys: uppercasedKeys, values: lowercasedValues };
+    const uppercasedKeys = Object.keys(object).map((key) => key.toUpperCase())
+    const lowercasedValues = Object.values(object).map((value) =>
+        value.toLowerCase(),
+    )
+    return { keys: uppercasedKeys, values: lowercasedValues }
 }
 
 /**
@@ -43,7 +45,11 @@ export function iteratesThroughObjectValuesAndProperties(object) {
  * @return {{younger: string, older: string}}
  */
 export function retrieveMaximumMinimumUserAges(users) {
-    // Write your code here
+    const sortedUsers = [...users].sort((a, b) => a.age - b.age)
+    return {
+        younger: sortedUsers[0].name,
+        older: sortedUsers[sortedUsers.length - 1].name,
+    }
 }
 
 /**
