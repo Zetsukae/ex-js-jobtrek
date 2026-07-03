@@ -10,7 +10,10 @@
  * The values of the properties should be "Toto", "Tutu"
  */
 export function createUserObject() {
-  // Write your code here
+    return {
+        first_name: "Toto",
+        last_name: "Tutu"
+    }
 }
 
 /**
@@ -18,7 +21,7 @@ export function createUserObject() {
  * @return {string} A concatenation of the first and last name, separated with a space
  */
 export function accessPropertiesInObjects(object) {
-  // Write your code here
+    // Write your code here
 }
 
 /**
@@ -28,7 +31,7 @@ export function accessPropertiesInObjects(object) {
  * "values" should contain all original object values mapped to lowercase
  */
 export function iteratesThroughObjectValuesAndProperties(object) {
-  // Write your code here
+    // Write your code here
 }
 
 /**
@@ -38,7 +41,7 @@ export function iteratesThroughObjectValuesAndProperties(object) {
  * @return {{younger: string, older: string}}
  */
 export function retrieveMaximumMinimumUserAges(users) {
-  // Write your code here
+    // Write your code here
 }
 
 /**
@@ -48,7 +51,7 @@ export function retrieveMaximumMinimumUserAges(users) {
  * @return {Object} An object retrieved by parsing the string
  */
 export function parseJavaScriptObjectNotation(string) {
-  // Write your code here
+    // Write your code here
 }
 
 /**
@@ -56,5 +59,5 @@ export function parseJavaScriptObjectNotation(string) {
  * @return {string} A string representing the given object
  */
 export function stringifyJavaScriptObjectNotation(object) {
-  // Write your code here
+    // Write your code here
 }
