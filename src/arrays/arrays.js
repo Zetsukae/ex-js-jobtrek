@@ -3,7 +3,16 @@
  * @return {array<string>} An array with all words isolated, and with empty strings removed
  */
 export function splitAllStringsByWordAndFilterEmptyOnes(array) {
-    // Write your code here
+    if (!Array.isArray(array)) {
+        throw new Error('array must be an array');
+    }
+    const result = array.flatMap((str) => {
+        if (typeof str !== 'string') {
+            throw new Error('array must only contain strings');
+        }
+        return str.split(' ').filter((word) => word !== '');
+    });
+    return result;
 }
 
 /**
@@ -13,7 +22,7 @@ export function splitAllStringsByWordAndFilterEmptyOnes(array) {
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
  */
 export function concatenateArrays(array1, array2) {
-    // Write your code here
+    // Write your code here commit after finishing the func.
 }
 
 /**
@@ -27,5 +36,5 @@ export function replaceElementsInArrayAtAGivenPlace(
     index,
     ...newElements
 ) {
-    // Write your code here
+    // Write your code here commit after finishing the func.
 }
