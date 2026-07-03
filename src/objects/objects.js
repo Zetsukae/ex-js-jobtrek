@@ -31,7 +31,9 @@ export function accessPropertiesInObjects(object) {
  * "values" should contain all original object values mapped to lowercase
  */
 export function iteratesThroughObjectValuesAndProperties(object) {
-    // Write your code here
+    const uppercasedKeys = Object.keys(object).map(key => key.toUpperCase());
+    const lowercasedValues = Object.values(object).map(value => value.toLowerCase());
+    return { keys: uppercasedKeys, values: lowercasedValues };
 }
 
 /**
