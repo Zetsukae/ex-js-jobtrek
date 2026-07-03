@@ -4,15 +4,15 @@
  */
 export function splitAllStringsByWordAndFilterEmptyOnes(array) {
     if (!Array.isArray(array)) {
-        throw new Error('array must be an array');
+        throw new Error('array must be an array')
     }
     const result = array.flatMap((str) => {
         if (typeof str !== 'string') {
-            throw new Error('array must only contain strings');
+            throw new Error('array must only contain strings')
         }
-        return str.split(' ').filter((word) => word !== '');
-    });
-    return result;
+        return str.split(' ').filter((word) => word !== '')
+    })
+    return result
 }
 
 /**
@@ -22,7 +22,10 @@ export function splitAllStringsByWordAndFilterEmptyOnes(array) {
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
  */
 export function concatenateArrays(array1, array2) {
-    // Write your code here commit after finishing the func.
+    if (!Array.isArray(array1) || !Array.isArray(array2)) {
+        throw new Error('array1 and array2 must be arrays')
+    }
+    return [...array1, ...array2]
 }
 
 /**
