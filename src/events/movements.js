@@ -75,5 +75,22 @@ export function hoverFocusAndBlur() {
  * Also apply this new color to the text of the input's labels.
  */
 export function changesOnInputEvents() {
-    // Write your code here
+    const input = document.getElementById("focus-me");
+    const labels = document.querySelectorAll(`label[for="${input.id}"]`);
+
+    let nextDefaultColor = '';
+
+    input.addEventListener("input", () => {
+        nextDefaultColor = randomRGB();
+
+        labels.forEach(label => {
+            label.style.color = nextDefaultColor;
+        });
+    });
+
+    input.addEventListener("blur", () => {
+        if (nextDefaultColor) {
+            input.style.borderColor = nextDefaultColor;
+        }
+    });
 }
