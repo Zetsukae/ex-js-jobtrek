@@ -7,5 +7,21 @@
  * Handle potential network errors gracefully.
  */
 export function fetchDataOnClick() {
-  // Write your code here
-}
+    const button = document.getElementById("click-to-fetch");
+    const displayElement = document.getElementById("display-here");
+    const url = "https://api.github.com/octocat";
+
+    button.addEventListener("click", async() => {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.text();
+            displayElement.textContent = data;
+        } catch (error) {
+            displayElement.textContent = `Error fetching data: ${error.message}`;
+        }
+    })
+};
