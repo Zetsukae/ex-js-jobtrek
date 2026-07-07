@@ -4,14 +4,19 @@
  * You need to display coordinates as follows : "x: 232, y: 332"
  */
 export function mouseMovements() {
-  // Write your code here
+    const coordinatesElement = document.getElementById("mouse-coordinates");
+    document.addEventListener("mousemove", event => {
+        const x = event.clientX;
+        const y = event.clientY;
+        coordinatesElement.textContent = `x: ${x}, y: ${y}`;
+    })
 }
 
 const randomRGB = () => {
-  const o = Math.round
-  const r = Math.random
-  const s = 255
-  return `rgba(${o(r() * s)},${o(r() * s)},${o(r() * s)})`
+    const o = Math.round
+    const r = Math.random
+    const s = 255
+    return `rgba(${o(r() * s)},${o(r() * s)},${o(r() * s)})`
 }
 const enteringColor = ''
 
@@ -25,7 +30,7 @@ const enteringColor = ''
  * 3. When the input loses focus, reset the border color to the one it had before focus.
  */
 export function hoverFocusAndBlur() {
-  // Write your code here
+    // Write your code here
 }
 
 /**
@@ -36,5 +41,5 @@ export function hoverFocusAndBlur() {
  * Also apply this new color to the text of the input's labels.
  */
 export function changesOnInputEvents() {
-  // Write your code here
+    // Write your code here
 }
