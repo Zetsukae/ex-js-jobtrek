@@ -17,7 +17,14 @@ export function getElementFromDomAndChangeColorToRed() {
  * The first paragraph must contain "Bonjour", the second "Toto".
  */
 export function addElementsInDOM() {
-    // Write your code here
+    const container = document.getElementById("add-your-elements-in-this-element");
+    const paragraph = document.createElement("p");
+    paragraph.textContent = "Bonjour";
+    container.appendChild(paragraph);
+
+    const paragraph1 = document.createElement("p");
+    paragraph1.textContent = "Toto";
+    container.appendChild(paragraph1);
 }
 
 /**
