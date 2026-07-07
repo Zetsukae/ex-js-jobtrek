@@ -45,5 +45,10 @@ export function addElementsInListOnEnterKey() {
  * Use the same list as the previous exercise. "#list"
  */
 export function removeElementsFromListWhenClicked() {
-    // Write your code here
+    const list = document.getElementById("list");
+    list.addEventListener("click", (event) => {
+        if (event.target.tagName === "LI") {
+            event.target.remove();
+        }
+    })
 }
