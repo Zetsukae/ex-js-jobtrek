@@ -8,7 +8,8 @@
  * You need to change the color of the html element with the id "change-my-color"
  */
 export function getElementFromDomAndChangeColorToRed() {
-  // Write your code here
+    const element = document.getElementById("change-my-color");
+    element.style.color = "red";
 }
 
 /**
@@ -16,7 +17,7 @@ export function getElementFromDomAndChangeColorToRed() {
  * The first paragraph must contain "Bonjour", the second "Toto".
  */
 export function addElementsInDOM() {
-  // Write your code here
+    // Write your code here
 }
 
 /**
@@ -26,5 +27,5 @@ export function addElementsInDOM() {
  * @param {array<{name: string, color: string}>} listElements
  */
 export function addAListInDomFromAnArrayOfObjects(listElements) {
-  // Write your code here
+    // Write your code here
 }
