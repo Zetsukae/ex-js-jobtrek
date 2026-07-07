@@ -4,7 +4,12 @@
  * If the input is empty, you should not trigger the alert.
  */
 export function displayInputContentInAlertOnEnterKey() {
-  // Write your code here
+    const input = document.getElementById("write-some-text");
+    input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && input.value.trim() !== "") {
+            alert(input.value);
+        }
+    });
 }
 
 /**
@@ -13,7 +18,7 @@ export function displayInputContentInAlertOnEnterKey() {
  * the text should be added as a new item in the list with id "list".
  */
 export function addElementsInListOnEnterKey() {
-  // Write your code here
+    // Write your code here
 }
 
 /**
@@ -21,5 +26,5 @@ export function addElementsInListOnEnterKey() {
  * Use the same list as the previous exercise. "#list"
  */
 export function removeElementsFromListWhenClicked() {
-  // Write your code here
+    // Write your code here
 }
